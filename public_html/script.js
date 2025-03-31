@@ -139,8 +139,7 @@ const additionalVariations = [
     { text: "｛Ben.Platt｝", font: "'Source Code Pro', monospace", delay: 100 },
     { text: "< benplatt.dev />", font: "'Roboto Mono', monospace", delay: 100 },
     { text: "console.log('Ben Platt');", font: "'Source Code Pro', monospace", delay: 100 },
-    { text: "And his name is... BEN PLATT!", font: "'Source Code Pro', sans-serif", delay: 100, class: 'text-glitch' },
-];
+    ];
 
 class TypingAnimation {
     constructor(element, variations) {
