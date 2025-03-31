@@ -14,5 +14,5 @@ jobs:
         server: ftp.benplatt.dev
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: /public_html/
+        server-dir: /home/benpohmq/
         local-dir: ./public_html/  # Ensure this points to the contents of ./public_html/
