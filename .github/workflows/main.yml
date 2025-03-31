@@ -8,10 +8,10 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
     
-    - name: 🐾 Copy contents to a temporary folder
+    - name: 🐾 Create temp directory for contents
       run: |
         mkdir temp_public_html
-        cp -R ./public_html/* temp_public_html/
+        cp -R ./public_html/* ./temp_public_html/
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -21,3 +21,6 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         server-dir: /public_html/
         local-dir: ./temp_public_html/
+        
+    - name: 🧹 Clean up temporary folder
+      run: rm -rf temp_public_html/
