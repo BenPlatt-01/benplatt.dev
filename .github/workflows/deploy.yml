@@ -1,4 +1,4 @@
-name: Deploy to Namecheap via FTP
+name: Deploy to Namecheap
 
 on:
   push:
@@ -10,14 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Deploy via FTP
-        uses: ftp-deploy-action/ftp-deploy-action@v2  # Change to v2, which should be the latest
-        with:
-          host: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./public_html/
-          server-dir: /public_html/
+    - name: Copy files via SSH
+      uses: appleboy/scp-action@master
+      with:
+        host: 162.0.215.195          # Replace with your Namecheap server's IP address
+        username: benpohmq       # Replace with your SSH username (e.g., 'jackgkrl')
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        source: "public_html/*"
+        target: "/home/benpohmq/public_html"  # Replace with the correct target path
+        port: 21098                     # Replace with your SSH port (default is usually 22, but Namecheap uses 21098)
