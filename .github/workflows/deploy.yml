@@ -1,4 +1,4 @@
-name: Deploy to Namecheap
+name: Deploy to Namecheap via FTP
 
 on:
   push:
@@ -13,12 +13,12 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Copy files via SSH
-      uses: appleboy/scp-action@master
+    - name: Upload files to cPanel via FTP
+      uses: appleboy/ftp-action@v0.1.0
       with:
-        host: 162.0.215.195          # Replace with your Namecheap server's IP address
-        username: benpohmq       # Replace with your SSH username (e.g., 'jackgkrl')
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        source: "public_html/*"
-        target: "/home/benpohmq/public_html"  # Replace with the correct target path
-        port: 21098                     # Replace with your SSH port (default is usually 22, but Namecheap uses 21098)
+        host: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        port: ${{ secrets.FTP_PORT }}
+        source: "public_html/*"  # Path to your local code in the GitHub repo
+        target: "/public_html"  # Target directory on the server (cPanel public_html directory)
