@@ -1190,7 +1190,7 @@ body {
     background-color: #1f2937;
     color: white;
     padding: var(--spacing-xl) var(--spacing-md);
-    margin-top: var(--spacing-xl);
+    margin-top: 1px;
 }
 
 .footer-content {
