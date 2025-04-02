@@ -509,8 +509,8 @@ body {
     display: flex;
     gap: var(--spacing-xl);
     align-items: flex-start;
-    justify-content: left;
-    flex-wrap: wrap;
+    justify-content: flex-start; /* Align to the left */
+    flex-wrap: nowrap; /* Prevent wrapping */
     max-width: 1000px;
     width: 100%;
 }
@@ -522,7 +522,7 @@ body {
     border-radius: var(--border-radius-md);
     overflow: hidden;
     box-shadow: var(--shadow-md);
-    flex-shrink: 0;
+    flex-shrink: 0; /* Prevent shrinking */
 }
 
 /* Headshot Image */
@@ -731,9 +731,13 @@ body {
     transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
     box-shadow: 0 4px 10px rgba(0, 106, 255, 0.4); /* Blue glow */
     max-width: 100%; /* Prevent overflow */
-    overflow: hidden; /* Ensure no overflow */
+    width: auto; /* Allow width to adjust based on content */
+    box-sizing: border-box; /* Ensure padding does not cause overflow */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
 }
 
+/* Hover state */
 .project-button:hover {
     background-color: var(--primary-light);
     transform: translateY(-3px);
@@ -750,7 +754,7 @@ body {
     background: var(--panel-dark);
 }
 
-/* Red Glow for Omni-Man Theme */
+/* Red Glow for Dark Theme */
 [data-theme="dark"] .project-image {
     box-shadow: 0 5px 15px rgba(185, 28, 28, 0.4);
 }
@@ -797,9 +801,9 @@ body {
     }
 
     .project-button {
-        padding: var(--spacing-xs) var(--spacing-sm); /* Adjust padding for mobile */
-        font-size: 14px; /* Optional: Adjust font size for smaller screens */
-        width: 100%; /* Ensure it doesn't extend beyond its container */
+        width: 95%; /* Set button width to 90% of its container */
+        max-width: 480px; /* Optional: Set a max width to keep it from getting too large */
+        padding: var(--spacing-xs) var(--spacing-md); /* Adjust padding for mobile */
     }
 }
 
@@ -1397,6 +1401,8 @@ body {
 
     .about-text-container {
         max-width: 100%;
+        color: var(--gray);
+        text-align: left;
     }
 
     .headshot-container {
