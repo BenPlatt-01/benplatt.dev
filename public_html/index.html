@@ -32,355 +32,338 @@
 
 
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/favicon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    
+
+
 <!-- Navigation -->
 <nav class="nav-container">
     <div class="nav-content">
-        <a href="#" class="nav-logo">
-            <img src="images/logo_svg.svg" alt="BP Logo" />
+        <!-- Main Logo -->
+        <a href="#top" class="nav-logo">
+            <img src="images/logo_svg.svg" alt="BP Logo" class="logo-img" />
         </a>
-        <!-- Regular Navigation Links (Desktop View) -->
-        <div class="nav-links">
+
+        <!-- Hamburger Menu -->
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-links">            
             <a href="#about" class="nav-link">About</a>
             <a href="#projects" class="nav-link">Projects</a>
             <a href="#models" class="nav-link">Models</a>
             <a href="#experience" class="nav-link">Experience</a>
             <a href="#education" class="nav-link">Education</a>
             <a href="#contact" class="nav-link">Contact</a>
+
+            <!-- Social Icons (Now Inside Mobile Menu) -->
+            <div class="nav-socials">
+                <a href="https://github.com/" class="social-link">
+                    <img src="images/gitlogo.svg" alt="GitHub">
+                </a>
+                <a href="https://itch.io/" class="social-link">
+                    <img src="images/itchLogo.svg" alt="Itch.io">
+                </a>
+                <a href="https://twitter.com/" class="social-link">
+                    <img src="images/LIlogo.svg" alt="LinkedIn">
+                </a>
+            </div>
         </div>
 
-        <!-- Social Media Icons (Desktop View) -->
-        <div class="nav-social-main">
-            <a href="https://github.com/BenPlatt-01" target="_blank" class="nav-social-link">
-                <img src="images/gitlogo.svg" alt="GitHub" />
-            </a>
-            <a href="https://theplxtt.itch.io" target="_blank" class="nav-social-link">
-                <img src="images/itchLogo.svg" alt="itch.io" />
-            </a>
-            <a href="https://www.linkedin.com/in/benplatt01/" target="_blank" class="nav-social-link">
-                <img src="images/LIlogo.svg" alt="LinkedIn" />
-            </a>
-        </div>
-
-        <!-- Hamburger Menu Icon (Mobile View) -->
-        <div class="hamburger-menu" id="hamburger-menu">
-            <span class="hamburger-bar"></span>
-            <span class="hamburger-bar"></span>
-            <span class="hamburger-bar"></span>
-        </div>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+            <input type="checkbox" id="theme-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </button>
     </div>
 </nav>
 
-<!-- Hidden sliding menu -->
-<div class="nav-menu" id="navMenu">
-    <div class="nav-sections">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#models" class="nav-link">Models</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#education" class="nav-link">Education</a>
-        <a href="#contact" class="nav-link">Contact</a>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1 class="hero-title">
+            <div class="typing-container">
+                <span id="dynamic-text"></span><span class="typing-cursor"></span>
+            </div>
+        </h1>
+        <p class="hero-subtitle">From Concept to Code: Crafting Immersive Experiences </p>
+        <a href="#contact" class="cta-button">Get in Touch</a>
     </div>
-    <!-- Social Media Icons -->
-    <div class="nav-social">
-        <a href="https://github.com/BenPlatt-01" target="_blank" class="nav-social-link">
-            <img src="images/gitlogo.svg" alt="GitHub" />
-        </a>
-        <a href="https://theplxtt.itch.io" target="_blank" class="nav-social-link">
-            <img src="images/itchLogo.svg" alt="itch.io" />
-        </a>
-        <a href="https://www.linkedin.com/in/benplatt01/" target="_blank" class="nav-social-link">
-            <img src="images/LIlogo.svg" alt="LinkedIn" />
-        </a>
-    </div>
-</div>
+</section>
 
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">
-                <div class="typing-container">
-                    <span id="dynamic-text"></span><span class="typing-cursor"></span>
-                </div>
-            </h1>
-            <p class="hero-subtitle">Game Programmer</p>
-            <a href="#contact" class="cta-button">Get in Touch</a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="section-content">
-            <h2 class="section-title">Hey, I'm Ben! 👋</h2>
-            <div class="about-container">
-                <div class="about-content">
-                    <div class="about-text-container">
-                        <p class="about-text">I'm a passionate game programmer with a strong foundation in computer science and a love for creating immersive worlds. While I spent four years studying computer science at university, my real growth came from hands-on experience—upskilling through Gamedev.tv and working on exciting game projects and mods with friends.</p>
+<!-- About Section -->
+<section id="about" class="section">
+    <div class="section-content">
+        <h2 class="section-title">Hey, I'm Ben! 👋</h2>
+        <div class="about-container">
+            <div class="about-content">
+                <div class="about-text-container">
+                    <p class="about-text">I'm a passionate game programmer with a strong foundation in computer science and a love for creating immersive worlds. While I spent four years studying computer science at university, my real growth came from hands-on experience—upskilling through Gamedev.tv and working on exciting game projects and mods with friends.</p>
                         <p class="about-text">I specialise in game development, 3D modelling, and C# coding, bringing ideas to life using Unity, C#, and Blender. Whether it's crafting engaging gameplay mechanics, optimising performance, or designing 3D assets, I love pushing my creative and technical boundaries.</p>
                         <p class="about-text">When I'm not developing my latest game or program, you'll probably find me watching wrestling or catching up on the latest in football. I'm also a massive fan of music and love keeping up to date with all the new rock and metal releases.</p>
                         <p class="about-text">Check out my work, and feel free to reach out—I’m always up for new collaborations and creative challenges!</p>
-                    </div>
-                    <div class="headshot-container">
-                        <img src="images/headshot.jpg" alt="Ben Platt" class="headshot-image">
-                    </div>
+                </div>
+                <div class="headshot-container">
+                    <img src="images/headshot.jpg" alt="Ben Platt" class="headshot-image">
                 </div>
             </div>
+        </div>
             
-            <div class="skills-section">
-                <h3 class="section-title">Skills</h3>
-                <div class="skills-container">
-                    <span class="skill-tag">Unity</span>
-                    <span class="skill-tag">Unreal</span>
-                    <span class="skill-tag">Godot</span>
-                    <span class="skill-tag">C++</span>
-                    <span class="skill-tag">C#</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">GDScript</span>
-                    <span class="skill-tag">Blender</span>
-                    <span class="skill-tag">Photoshop</span>
-                    <span class="skill-tag">Aseprite</span>
-                    <span class="skill-tag">Krita</span>
-                    <span class="skill-tag">Audacity</span>
-                    <span class="skill-tag">GitHub</span>
-                    <span class="skill-tag">GitLab</span>
-                    <span class="skill-tag">Photon</span>
-                    <span class="skill-tag">itch.io</span>
-                </div>
+        <div class="skills-section">
+            <h3 class="section-title">Skills</h3>
+            <div class="skills-container">
+                <span class="skill-tag">Unity</span>
+                <span class="skill-tag">Unreal</span>
+                <span class="skill-tag">Godot</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">C#</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">GDScript</span>
+                <span class="skill-tag">Blender</span>
+                <span class="skill-tag">Photoshop</span>
+                <span class="skill-tag">Aseprite</span>
+                <span class="skill-tag">Krita</span>
+                <span class="skill-tag">Audacity</span>
+                <span class="skill-tag">GitHub</span>
+                <span class="skill-tag">GitLab</span>
+                <span class="skill-tag">Photon</span>
+                <span class="skill-tag">itch.io</span>
             </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="section-content">
-            <h2 class="section-title">My Projects ⌨️</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-content">
-                        <img src="images/unityLogo.svg" alt="Unity Logo" class="project-logo">
-                        <h3 class="project-title">Little Humans</h3>
-                        <p class="project-subtitle">First Published itch.io Game</p>
-                        <p class="project-description">Little Humans was one of the first real projects I did. It was done through the Blackthorn Prod Launchpad course and eventually uploaded to itch.io.</p>
-                        <p class="project-description">I was given most of the assets that were used in the building of the project; however, all the C# scripts were made by me, as well as the gameplay loop.</p>
-                        <p class="project-description">It is available to download and play from my itch.io account, linked at the top of the page!</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Unity</span>
-                            <span class="project-tag">C#</span>
-                            <span class="project-tag">itch.io</span>
-                        </div>
-                        <a href="https://github.com/BenPlatt-01/LittleHumans" class="project-button" target="_blank">View on GitHub</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <img src="images/unityLogo.svg" alt="Unity Logo" class="project-logo">
-                        <h3 class="project-title">Rocket Boost</h3>
-                        <p class="project-subtitle">First gamedev.tv Project</p>
-                        <p class="project-description">Rocket Boost is the first game I developed while at Gamedev.tv. It is a very small and simple game that follows a "get from A to B" style of gameplay.</p>
-                        <p class="project-description">During this, I learned the ins and outs of Unity's physics systems and particle systems. I also learned how to use the Scene Loading Manager.</p>
-                        <p class="project-description">The full project files are available on my GitHub and can be accessed below!</p>
-
-                        <div class="project-tags">
-                            <span class="project-tag">Unity</span>
-                            <span class="project-tag">C#</span>
-                            <span class="project-tag">itch.io</span>
-                        </div>
-                        <a href="" class="project-button" target="_blank">View on GitHub</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <img src="images/godotLogo.svg" alt="Godot Logo" class="project-logo">
-                        <h3 class="project-title">Robo Rampage</h3>
-                        <p class="project-subtitle">First Godot Game</p>
-                        <p class="project-description">Robo Rampage is a 3D retro FPS that was built in Godot. I developed this while doing the courses with Gamedev.tv.</p>
-                        <p class="project-description">Through this, I learned a lot more about Godot, specifically the Constructive Solid Geometry tool, or more commonly known as CSG.</p>
-                        <p class="project-description">I used this to build a multitude of different rooms that the player could explore until their heart's content.</p>
-
-                        <div class="project-tags">
-                            <span class="project-tag">Godot</span>
-                            <span class="project-tag">GDScript</span>
-                        </div>
-                        <a href="" class="project-button" target="_blank">View on GitHub</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <img src="images/unityLogo.svg" alt="Unity Logo" class="project-logo">
-                        <h3 class="project-title">Sharp Shooter</h3>
-                        <p class="project-subtitle">Unity FPS Shooter Game</p>
-                        <p class="project-description">This was my first fully fledged project that I built from the ground up. It is a project that encompasses everything I learned through my upskilling.</p>
-                        <p class="project-description">It was built using different tools and features in Unity and also houses some of my more basic models I made using Blender.</p>
-                        <p class="project-description">The full code repository is available through my GitHub, and the game is playable via my itch.io page.</p>
-
-                        <div class="project-tags">
-                            <span class="project-tag">Unity</span>
-                            <span class="project-tag">C#</span>
-                            <span class="project-tag">itch.io</span>
-                        </div>
-                        <a href="" class="project-button" target="_blank">View on GitHub</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <img src="images/unityLogo.svg" alt="Unity Logo" class="project-logo">
-                        <h3 class="project-title">Echoes of Now</h3>
-                        <p class="project-subtitle">3D Environmental Puzzle Game</p>
-                        <p class="project-description">Echoes of Now is a game where the main character can control time. You have to find your way through a variety of different levels that get progressively harder with each iteration.</p>
-                        <p class="project-description">The game is rich in story and design and is currently in the early stages of development, with a team of two people working on it!</p>
-                        <p class="project-description">There are some beginnings of the game and a link to the documentation on my GitHub that you can view below!</p>
-
-                        <div class="project-tags">
-                            <span class="project-tag">Unity</span>
-                            <span class="project-tag">C#</span>
-                            <span class="project-tag">itch.io</span>
-                        </div>
-                        <a href="https://github.com/BenPlatt-01/EchoesOfNow" class="project-button" target="_blank">View on GitHub</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">Coming Soon</h3>
-                        <p class="project-description">More projects will be added here soon.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3D Models Section -->
-    <section id="models" class="section">
-        <div class="section-content">
-            <h2 class="section-title">My 3D Models 🎨</h2>
-            <div class="models-grid">
-                    <!-- <div class="model-card">
-                        <div class="model-content">
-                            <img src="images/wendigoRender.jpg" alt="Model 1" class="model-preview">
-                            <h3 class="model-title">Wendigo</h3>
-                            <p class="model-subtitle">Horror Game Character</p>
-                            <p class="model-description">This Wendigo model was made for a Horror Game project. </p>
-                            <div class="model-tags">
-                                <span class="model-tag">ZBrush</span>
-                                <span class="model-tag">Maya</span>
-                                <span class="model-tag">Substance Painter</span>
-                                <span class="model-tag">Game Ready</span>
-                            </div>
-                            <a href="https://sketchfab.com/yourusername/helmet" class="model-button" target="_blank">View on Sketchfab</a>
-                        </div>
-                    </div>
-                    <div class="model-card">
-                        <div class="model-content">
-                            <img src="images/bibleRender.jpg" alt="Model 2" class="model-preview">
-                            <h3 class="model-title">Satan's Bible</h3>
-                            <p class="model-subtitle">Occult Weapon</p>
-                            <p class="model-description">A proof of concept for the same horror game.</p>
-                            <div class="model-tags">
-                                <span class="model-tag">Blender</span>
-                                <span class="model-tag">PBR Texturing</span>
-                                <span class="model-tag">Game Asset</span>
-                            </div>
-                            <a href="https://sketchfab.com/yourusername/sword" class="model-button" target="_blank">View on Sketchfab</a>
-                        </div>
-                    </div> -->
-                <div class="model-card">
-                    <div class="model-content">
-                        <h3 class="model-title">Coming Soon</h3>
-                        <p class="model-description">More 3D models will be added here soon.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-<!-- Experience Section -->
-<section id="experience" class="section">
-    <div class="section-content">
-        <h2 class="section-title">My Experience 📝</h2>
-        <div class="education-item">
-            <h3 class="education-title">Queen's University Belfast - ECIT</h3>
-            <p class="education-degree"></p>
-            <p class="education-date">2021 - 2022</p>
-            <p class="education-description">Worked in an agile working environment with weekly/bi-weekly sprint planning meetings with scrum master.</p>
-            <p class="education-description">Worked on a variety of different projects from start to finish so was able to see the full development lifecycle. Projects also were a mixture of solo and team-based projects. </p>
-            <p class="education-description">First project was automated testing of a questionnaire system that was hosted on Azure and used schemas to generate an answer sheet at the end. I was involved in testing the schemas against our test suites we had developed. </p>
-            <p class="education-description">Second project was a team-based project based on Honeypot Data Analysis. This was the other placement students and I’s biggest project we had during our placement year. The issue was there was 25+ honeypots with a lot of data on them but they were in all different formats and styles. So, we decided to bring them all to one comparable format (JSON). </p>
-            <p class="education-description">Developed the second project in Linux to pull down the Honeypot data each day and use schemas to produce a legible version that would then be stored and dated for future use. </p>
-            <p class="education-description">Final project was an AI Model demonstration of how you can bypass facial recognition. This was built on a Raspberry Pi and was packaged using a Flask API. </p>
         </div>
     </div>
+</section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="section-content">
+        <h2 class="section-title">My Projects ⌨️</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-content">
+                    <img src="images/unityLogo.svg" alt="Unity Logo" class="project-logo">
+                    <h3 class="project-title">Little Humans</h3>
+                    <p class="project-subtitle">First Published itch.io Game</p>
+                    <p class="project-description">Little Humans was one of the first real projects I did. It was done through the Blackthorn Prod Launchpad course and eventually uploaded to itch.io.</p>
+                    <p class="project-description">I was given most of the assets that were used in the building of the project; however, all the C# scripts were made by me, as well as the gameplay loop.</p>
+                    <p class="project-description">It is available to download and play from my itch.io account, linked at the top of the page!</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Unity</span>
+                        <span class="project-tag">C#</span>
+                        <span class="project-tag">itch.io</span>
+                    </div>
+                    <a href="https://github.com/BenPlatt-01/LittleHumans" class="project-button" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <img src="images/unityLogo.svg" alt="Unity Logo" class="project-logo">
+                    <h3 class="project-title">Rocket Boost</h3>
+                    <p class="project-subtitle">First gamedev.tv Project</p>
+                    <p class="project-description">Rocket Boost is the first game I developed while at Gamedev.tv. It is a very small and simple game that follows a "get from A to B" style of gameplay.</p>
+                    <p class="project-description">During this, I learned the ins and outs of Unity's physics systems and particle systems. I also learned how to use the Scene Loading Manager.</p>
+                    <p class="project-description">The full project files are available on my GitHub and can be accessed below!</p>
+
+                    <div class="project-tags">
+                        <span class="project-tag">Unity</span>
+                        <span class="project-tag">C#</span>
+                        <span class="project-tag">itch.io</span>
+                    </div>
+                    <a href="" class="project-button" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <img src="images/godotLogo.svg" alt="Godot Logo" class="project-logo">
+                    <h3 class="project-title">Robo Rampage</h3>
+                    <p class="project-subtitle">First Godot Game</p>
+                    <p class="project-description">Robo Rampage is a 3D retro FPS that was built in Godot. I developed this while doing the courses with Gamedev.tv.</p>
+                    <p class="project-description">Through this, I learned a lot more about Godot, specifically the Constructive Solid Geometry tool, or more commonly known as CSG.</p>
+                    <p class="project-description">I used this to build a multitude of different rooms that the player could explore until their heart's content.</p>
+
+                    <div class="project-tags">
+                        <span class="project-tag">Godot</span>
+                        <span class="project-tag">GDScript</span>
+                    </div>
+                    <a href="" class="project-button" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <img src="images/unityLogo.svg" alt="Unity Logo" class="project-logo">
+                    <h3 class="project-title">Sharp Shooter</h3>
+                    <p class="project-subtitle">Unity FPS Shooter Game</p>
+                    <p class="project-description">This was my first fully fledged project that I built from the ground up. It is a project that encompasses everything I learned through my upskilling.</p>
+                    <p class="project-description">It was built using different tools and features in Unity and also houses some of my more basic models I made using Blender.</p>
+                    <p class="project-description">The full code repository is available through my GitHub, and the game is playable via my itch.io page.</p>
+
+                    <div class="project-tags">
+                        <span class="project-tag">Unity</span>
+                        <span class="project-tag">C#</span>
+                        <span class="project-tag">itch.io</span>
+                    </div>
+                    <a href="" class="project-button" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <img src="images/unityLogo.svg" alt="Unity Logo" class="project-logo">
+                    <h3 class="project-title">Echoes of Now</h3>
+                    <p class="project-subtitle">3D Environmental Puzzle Game</p>
+                    <p class="project-description">Echoes of Now is a game where the main character can control time. You have to find your way through a variety of different levels that get progressively harder with each iteration.</p>
+                    <p class="project-description">The game is rich in story and design and is currently in the early stages of development, with a team of two people working on it!</p>
+                    <p class="project-description">There are some beginnings of the game and a link to the documentation on my GitHub that you can view below!</p>
+
+                    <div class="project-tags">
+                        <span class="project-tag">Unity</span>
+                        <span class="project-tag">C#</span>
+                        <span class="project-tag">itch.io</span>
+                    </div>
+                    <a href="https://github.com/BenPlatt-01/EchoesOfNow" class="project-button" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <h3 class="project-title">Coming Soon</h3>
+                    <p class="project-description">More projects will be added here soon.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 3D Models Section -->
+<section id="models" class="section">
+    <div class="section-content">
+        <h2 class="section-title">My 3D Models 🎨</h2>
+        <div class="models-grid">
+                <div class="model-card">
+                    <!-- <div class="model-content">
+                        <img src="images/wedigoRender.png" alt="Model 1" class="model-preview">
+                        <h3 class="model-title">Wendigo</h3>
+                        <p class="model-subtitle">Horror Game Character</p>
+                        <p class="model-description">This Wendigo model was made for a Horror Game project. </p>
+                        <div class="model-tags">
+                            <span class="model-tag">ZBrush</span>
+                            <span class="model-tag">Maya</span>
+                            <span class="model-tag">Substance Painter</span>
+                            <span class="model-tag">Game Ready</span>
+                        </div>
+                        <a href="https://sketchfab.com/yourusername/helmet" class="model-button" target="_blank">View on Sketchfab</a>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div class="model-content">
+                        <img src="images/bibleRender.jpg" alt="Model 2" class="model-preview">
+                        <h3 class="model-title">Satan's Bible</h3>
+                        <p class="model-subtitle">Occult Weapon</p>
+                        <p class="model-description">A proof of concept for the same horror game.</p>
+                        <div class="model-tags">
+                            <span class="model-tag">Blender</span>
+                            <span class="model-tag">PBR Texturing</span>
+                            <span class="model-tag">Game Asset</span>
+                        </div>
+                        <a href="https://sketchfab.com/yourusername/sword" class="model-button" target="_blank">View on Sketchfab</a>
+                    </div>
+                </div>
+            <div class="model-card">
+                <div class="model-content"> -->
+                    <h3 class="model-title">Coming Soon</h3>
+                    <p class="model-description">More 3D models will be added here soon.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Experience Section -->
+<section id="experience" class="section">
+<div class="section-content">
+    <h2 class="section-title">My Experience 📝</h2>
+    <div class="education-item">
+        <h3 class="education-title">Queen's University Belfast - ECIT</h3>
+        <p class="education-degree"></p>
+        <p class="education-date">2021 - 2022</p>
+        <p class="education-description">Worked in an agile working environment with weekly/bi-weekly sprint planning meetings with scrum master.</p>
+        <p class="education-description">Worked on a variety of different projects from start to finish so was able to see the full development lifecycle. Projects also were a mixture of solo and team-based projects. </p>
+        <p class="education-description">First project was automated testing of a questionnaire system that was hosted on Azure and used schemas to generate an answer sheet at the end. I was involved in testing the schemas against our test suites we had developed. </p>
+        <p class="education-description">Second project was a team-based project based on Honeypot Data Analysis. This was the other placement students and I’s biggest project we had during our placement year. The issue was there was 25+ honeypots with a lot of data on them but they were in all different formats and styles. So, we decided to bring them all to one comparable format (JSON). </p>
+        <p class="education-description">Developed the second project in Linux to pull down the Honeypot data each day and use schemas to produce a legible version that would then be stored and dated for future use. </p>
+        <p class="education-description">Final project was an AI Model demonstration of how you can bypass facial recognition. This was built on a Raspberry Pi and was packaged using a Flask API. </p>
+    </div>
+</div>
 </section>
 
 <!-- Education Section -->
 <section id="education" class="section">
-    <div class="section-content">
-        <h2 class="section-title">My Education 📝</h2>
-        <div class="education-item">
-            <h3 class="education-title">gamedev.tv</h3>
-            <p class="education-degree"></p>
-            <p class="education-date">2024-2025</p>
-            <p class="education-description">Completed multiple different courses on different aspects within game design. This included upskilling in things such as Unity, Blender, Godot and Unreal. I also took on a few courses to learn cinematics in Unreal and Unity and a course to learn best practices for industry standard code. </p>
-        </div>
-        <div class="education-item">
-            <h3 class="education-title">Queen's University Belfast</h3>
-            <p class="education-degree"></p>
-            <p class="education-date">2021 - 2024</p>
-            <p class="education-description">Completed final two years focusing on advanced computing concepts including Cloud Computing, Network Security, Software Testing, and Concurrent Programming. Developed strong practical skills through advanced modules in Systems Development and Data Structures & Algorithms. Final year project involved developing a React Native application, that was used to help people living with dementia have a better quality of life with things such as memory games, brain training games and a facial recognition login script.</p>
-        </div>
-        <div class="education-item">
-            <h3 class="education-title">Ulster University</h3>
-            <p class="education-degree">BSc Computer Science - First Year</p>
-            <p class="education-date">2020 - 2021</p>
-            <p class="education-description">Established strong programming foundations through core modules in Programming (Python and Java) and Database Systems. Gained practical experience in web development and systems software, setting a solid foundation for further studies.</p>
-        </div>
+<div class="section-content">
+    <h2 class="section-title">My Education 📝</h2>
+    <div class="education-item">
+        <h3 class="education-title">gamedev.tv</h3>
+        <p class="education-degree"></p>
+        <p class="education-date">2024-2025</p>
+        <p class="education-description">Completed multiple different courses on different aspects within game design. This included upskilling in things such as Unity, Blender, Godot and Unreal. I also took on a few courses to learn cinematics in Unreal and Unity and a course to learn best practices for industry standard code. </p>
     </div>
+    <div class="education-item">
+        <h3 class="education-title">Queen's University Belfast</h3>
+        <p class="education-degree"></p>
+        <p class="education-date">2021 - 2024</p>
+        <p class="education-description">Completed final two years focusing on advanced computing concepts including Cloud Computing, Network Security, Software Testing, and Concurrent Programming. Developed strong practical skills through advanced modules in Systems Development and Data Structures & Algorithms. Final year project involved developing a React Native application, that was used to help people living with dementia have a better quality of life with things such as memory games, brain training games and a facial recognition login script.</p>
+    </div>
+    <div class="education-item">
+        <h3 class="education-title">Ulster University</h3>
+        <p class="education-degree">BSc Computer Science - First Year</p>
+        <p class="education-date">2020 - 2021</p>
+        <p class="education-description">Established strong programming foundations through core modules in Programming (Python and Java) and Database Systems. Gained practical experience in web development and systems software, setting a solid foundation for further studies.</p>
+    </div>
+</div>
 </section>
 
 <!-- Contact Section -->
 <section id="contact" class="section">
-    <div class="section-content">
-        <h2 class="section-title">Get in Touch ☎️</h2>
-        <div class="contact-content">
-            <p class="contact-text">Looking to collaborate or discuss opportunities? I'm always open to connecting with fellow developers, game devs, and industry professionals.</p>
-            <div class="contact-buttons">
-                <a href="https://www.linkedin.com/in/benplatt01/" target="_blank" rel="noopener noreferrer" class="button linkedin-button">
-                    Connect on LinkedIn
-                </a>
-                <a href="mailto:plattben22@icloud.com" class="button email-button">
-                    Email Me
-                </a>
-                <a href="files/benplattCV.pdf" download class="button cv-button">
-                    Download CV
-                </a>
-            </div>
+<div class="section-content">
+    <h2 class="section-title">Get in Touch ☎️</h2>
+    <div class="contact-content">
+        <p class="contact-text">Looking to collaborate or discuss opportunities? I'm always open to connecting with fellow developers, game devs, and industry professionals.</p>
+        <div class="contact-buttons">
+            <a href="https://www.linkedin.com/in/benplatt01/" target="_blank" rel="noopener noreferrer" class="button linkedin-button">
+                Connect on LinkedIn
+            </a>
+            <a href="mailto:plattben22@icloud.com" class="button email-button">
+                Email Me
+            </a>
+            <a href="files/benplattCV.pdf" download class="button cv-button">
+                Download CV
+            </a>
         </div>
     </div>
+</div>
 </section>
 
 
 <!-- Footer -->
 <footer class="footer">
-    <div class="footer-content">
-        <p>&copy; 2025 Ben Platt. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://github.com/BenPlatt-01" class="social-link">GitHub</a>
-            <a href="https://theplxtt.itch.io" class="social-link">itch.io</a>
-            <a href="https://www.linkedin.com/in/benplatt01/" class="social-link">LinkedIn</a>            
-        </div>
-    <div>
-        <p>Original website template created by <a href="https://jackwatt.dev">Jack Watt</a></p>
+<div class="footer-content">
+    <p>&copy; 2025 Ben Platt. All rights reserved.</p>
+    <div class="social-links">
+        <a href="https://github.com/BenPlatt-01" class="social-link">GitHub</a>
+        <a href="https://theplxtt.itch.io" class="social-link">itch.io</a>
+        <a href="https://www.linkedin.com/in/benplatt01/" class="social-link">LinkedIn</a>            
     </div>
-    </div>
+<div>
+    <p>Original website template created by <a href="https://jackwatt.dev">Jack Watt</a></p>
+</div>
+</div>
 </footer>
+
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
