@@ -509,7 +509,7 @@ body {
     display: flex;
     gap: var(--spacing-xl);
     align-items: flex-start;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap;
     max-width: 1000px;
     width: 100%;
@@ -730,6 +730,8 @@ body {
     font-weight: 600;
     transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
     box-shadow: 0 4px 10px rgba(0, 106, 255, 0.4); /* Blue glow */
+    max-width: 100%; /* Prevent overflow */
+    overflow: hidden; /* Ensure no overflow */
 }
 
 .project-button:hover {
@@ -795,8 +797,9 @@ body {
     }
 
     .project-button {
-        width: 100%;
-        text-align: center;
+        padding: var(--spacing-xs) var(--spacing-sm); /* Adjust padding for mobile */
+        font-size: 14px; /* Optional: Adjust font size for smaller screens */
+        width: 100%; /* Ensure it doesn't extend beyond its container */
     }
 }
 
