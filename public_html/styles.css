@@ -1048,6 +1048,7 @@ body {
 /* Contact Section */
 .contact-content {
     text-align: center;
+    width: 100%;
     max-width: 600px;
     margin: 0 auto;
     padding: var(--spacing-lg);
@@ -1060,6 +1061,7 @@ body {
     opacity: 0;
     transform: translateY(20px);
     will-change: opacity, transform;
+    box-sizing: border-box;
 }
 
 /* Fade-in Animation */
@@ -1068,9 +1070,9 @@ body {
     transform: translateY(0);
 }
 
-/* Hover Glow Effect */
+/* Hover Glow */
 .contact-content:hover {
-    box-shadow: 0 6px 20px rgba(0, 106, 255, 0.3); /* Blue glow in light mode */
+    box-shadow: 0 6px 20px rgba(0, 106, 255, 0.3);
 }
 
 /* Contact Text */
@@ -1081,42 +1083,48 @@ body {
     line-height: 1.6;
 }
 
-/* Contact Buttons */
+/* Contact Buttons Container */
 .contact-buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--spacing-md);
     width: 100%;
-    max-width: 350px;
+    max-width: 100%;
     margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* General Button Styles */
+/* Button Styles */
 .linkedin-button, .email-button, .cv-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 75%;
+    width: 100%;
+    max-width: 350px;
     min-height: 50px;
+    padding: 0.75rem 1rem;
     background-color: var(--primary);
     color: var(--white);
-    padding: var(--spacing-md) var(--spacing-lg);
     border-radius: var(--border-radius-sm);
     font-weight: 600;
     text-decoration: none;
     transition: all var(--transition-speed) ease;
     box-shadow: var(--shadow-md);
-    position: relative;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    box-sizing: border-box;
 }
 
-/* Button Hover Glow */
+/* Hover Glow */
 .linkedin-button:hover, .email-button:hover, .cv-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 106, 255, 0.6); /* Blue glow in light mode */
+    box-shadow: 0 6px 15px rgba(0, 106, 255, 0.6);
 }
 
-/* Icon Styling */
+/* Icon Before Each Button */
 .linkedin-button::before, .email-button::before, .cv-button::before {
     content: '';
     display: inline-block;
@@ -1125,11 +1133,12 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     margin-right: var(--spacing-sm);
+    flex-shrink: 0;
 }
 
 /* LinkedIn Icon */
 .linkedin-button::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z'/%3E%3C/svg%3E"); /* abbreviated for clarity */
 }
 
 /* Email Icon */
@@ -1149,12 +1158,10 @@ body {
     box-shadow: var(--shadow-md);
 }
 
-/* Dark Mode Hover Glow */
 [data-theme="dark"] .contact-content:hover {
-    box-shadow: 0 6px 20px rgba(185, 28, 28, 0.6); /* Red glow in dark mode */
+    box-shadow: 0 6px 20px rgba(185, 28, 28, 0.6);
 }
 
-/* Dark Mode Buttons */
 [data-theme="dark"] .linkedin-button, 
 [data-theme="dark"] .email-button, 
 [data-theme="dark"] .cv-button {
@@ -1163,14 +1170,13 @@ body {
     border: 1px solid var(--text-dark);
 }
 
-/* Dark Mode Button Hover Glow */
 [data-theme="dark"] .linkedin-button:hover, 
 [data-theme="dark"] .email-button:hover, 
 [data-theme="dark"] .cv-button:hover {
-    box-shadow: 0 6px 15px rgba(185, 28, 28, 0.6); /* Red glow in dark mode */
+    box-shadow: 0 6px 15px rgba(185, 28, 28, 0.6);
 }
 
-/* Responsive Adjustments */
+/* Mobile Fixes */
 @media (max-width: 768px) {
     .contact-content {
         padding: var(--spacing-md);
@@ -1181,11 +1187,15 @@ body {
     }
 
     .contact-buttons {
-        max-width: 300px;
+        width: 100%;
+        max-width: 100%;
     }
 
-    .linkedin-button, .email-button, .cv-button {
-        width: 90%;
+    .linkedin-button,
+    .email-button,
+    .cv-button {
+        width: 100%;
+        max-width: 100%;
     }
 }
 
